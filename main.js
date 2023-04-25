@@ -11,8 +11,12 @@ function main() {
     x = document.createElement('div');
     x.setAttribute('id','main');
     x.style.color = 'white';
-    x.textContent = '\f' + '#belum siap bruh!' + '\u{1F5ff}';
     document.body.appendChild(x);
+    
+    let game1 = document.createElement('div');
+    game1.setAttribute('id','game1');
+    x.appendChild(game1);
+    
   } if ($ > 1) {
     x.parentNode.removeChild(x);
     $ = 0;
