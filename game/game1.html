@@ -5,17 +5,26 @@
   
   <head>
     <title>mygame</title>
+    <style>
+    body {
+      background-color: orange;
+    }
+    
+    #canvas {
+      border: 3px solid black;
+      width: 400px;
+      height: 400px;
+    }
+    </style>
   </head>
   
   <body>
     <canvas id='canvas'></canvas>
     
     <script>
-      console.log("halo dunia!");
+      const canvas = document.getElementById('canvas')
       
-      const canvas = document.getElementById('canvas');
-      canvas.width = '400px';
-      canvas.height = canvas.width;
+      console.log(canvas)
     </script>
   </body>
 </html>
