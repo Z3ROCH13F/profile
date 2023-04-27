@@ -15,6 +15,9 @@ function main() {
     
     let game1 = document.createElement('div');
     game1.setAttribute('id','game1');
+    game1.addEventListener('click', function() {
+      window.location.href = 'game/game1.html';
+    });
     x.appendChild(game1);
     
   } if ($ > 1) {
