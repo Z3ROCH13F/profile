@@ -2,17 +2,15 @@
 <!DOCTYPE html>
 
 <html>
-  
   <head>
-    <title>mygame</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
     body {
       background-color: orange;
     }
     
     #canvas {
-      border: 3px solid black;
+      background-color: black;
+      border: 3px solid white;
       width: 400px;
       height: 400px;
     }
@@ -23,9 +21,9 @@
     <canvas id='canvas'></canvas>
     
     <script>
-      const canvas = document.getElementById('canvas')
-      
-      console.log(canvas)
+    // bug?
+    const canvas = document.getElementById('canvas');
+    console.log(canvas);
     </script>
   </body>
 </html>
