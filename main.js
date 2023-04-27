@@ -4,6 +4,7 @@ let $ = 0;
 let time = 0;
 let isAlertClicked = false;
 let click = false;
+let game1;
 
 function main() {
   $++;
@@ -13,7 +14,7 @@ function main() {
     x.style.color = 'white';
     document.body.appendChild(x);
     
-    let game1 = document.createElement('div');
+    game1 = document.createElement('div');
     game1.setAttribute('id','game1');
     game1.innerText = 'clickMe';
     game1.addEventListener('click', function() {
