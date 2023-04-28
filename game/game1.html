@@ -10,10 +10,8 @@
     }
     
     #canvas {
-      background-color: black;
-      border: 3px solid white;
-      width: 400px;
-      height: 400px;
+      background-color: white;
+      border: 2px solid black;
     }
     </style>
   </head>
@@ -27,7 +25,11 @@
     canvas.width = window.innerWidth - 20;
     canvas.height = canvas.width;
     
-    console.log(canvas);
+    const ctx = canvas.getContext('2d');
+    
+    (function loop() {
+      ctx.fillRect(20,20,40,40);
+    })();
     </script>
   </body>
 </html>
