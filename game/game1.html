@@ -27,18 +27,21 @@
     
     const ctx = canvas.getContext('2d');
     let x = 20;
+    let FUN = 1;
     
     (function loop() {
       // try in web hosting #lol
       
       if (x > canvas.width - 40) {
-        x = 20;
+        FUN = -1;
+      } if (x < 0 - 20) {
+        FUN = 1;
       }
       
       ctx.clearRect(0,20,window.innerWidth,window.innerHeight);
       ctx.fillRect(x,20,40,40);
       
-      x++;
+      x += FUN;
       requestAnimationFrame(loop);
     })();
     </script>
