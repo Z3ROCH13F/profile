@@ -30,27 +30,46 @@
     let y = 20;
     let FUN = 1;
     let FUNY = 1;
+    let v = 3.1114;
+    let g = 0.09;
     
     (function loop() {
-      // try it #lol
+      // try it #lol ntah apa yang aku buat 🗿 ni
       
       if (x > canvas.width - 40) {
-        FUN = -1;
-        FUNY = Math.random()*2;
+        if (x > canvas.width - 40 && FUNY < 0) {
+         FUN = -1;
+         FUNY = - v;
+         v -= g;
+        } else {
+         FUN = -1;
+         FUNY = v;
+         v += g;
+        }
+        
+      // nanti fix kode dibawah
       } if (x < 0) {
         FUN = 1;
-        FUNY = - Math.random()*2;
-      } if (y > canvas.height) {
-        FUNY = - Math.random()*2;
+        if (x < 0 && FUNY < 0) {
+         FUNY = - v;
+         v -= g;
+        } if (x > 0 && FUNY > 0) {
+         FUNY = v;
+        }
+        
+      } if (y > canvas.height - 40) {
+        FUNY = - v - (g*2);
       } if (y < 0) {
-        FUNY = Math.random()*2;
+        FUNY = v && v - g;
       }
       
       ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
       ctx.fillRect(x,y,40,40);
+      ctx.fillText(`x : ${x} y : ${y} FUN : ${FUN} FUNY : ${FUNY} v : ${v}`,5,20)
       
       x += FUN;
       y += FUNY;
+      
       requestAnimationFrame(loop);
     })();
     </script>
