@@ -27,21 +27,30 @@
     
     const ctx = canvas.getContext('2d');
     let x = 20;
+    let y = 20;
     let FUN = 1;
+    let FUNY = 1;
     
     (function loop() {
-      // try in web hosting #lol
+      // try it #lol
       
       if (x > canvas.width - 40) {
         FUN = -1;
+        FUNY = Math.random()*2;
       } if (x < 0) {
         FUN = 1;
+        FUNY = - Math.random()*2;
+      } if (y > canvas.height) {
+        FUNY = - Math.random()*2;
+      } if (y < 0) {
+        FUNY = Math.random()*2;
       }
       
       ctx.clearRect(0,20,window.innerWidth,window.innerHeight);
-      ctx.fillRect(x,20,40,40);
+      ctx.fillRect(x,y,40,40);
       
       x += FUN;
+      y += FUNY;
       requestAnimationFrame(loop);
     })();
     </script>
