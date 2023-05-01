@@ -4,7 +4,7 @@ body {
 }
 
 ._ {
-  position: absolute;
+  position: fixed;
   top: 20px;
   background-color: black;
   width: 300px;
@@ -15,7 +15,7 @@ body {
 }
 
 img {
-  position: absolute;
+  position: fixed;
   top: 10px;
   width: 200px;
   height: 200px;
@@ -26,7 +26,7 @@ img {
 }
 
 h3 {
-  position: absolute;
+  position: fixed;
   font-family: monospace;
   top: 250px;
   left: 10px;
@@ -35,7 +35,7 @@ h3 {
 }
 
 #main {
-  position: absolute;
+  position: fixed;
   background-color: black;
   width: 350px;
   height: 200px;
@@ -45,7 +45,7 @@ h3 {
 }
 
 #game1 {
-  position: absolute;
+  position: fixed;
   background-color: red;
   border-radius: 3px;
   left: 10px;
