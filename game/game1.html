@@ -1,6 +1,4 @@
-
 <!DOCTYPE html>
-
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,18 +10,28 @@
     #canvas {
       background-color: white;
       border: 2px solid black;
+      border-top: 25px solid rgb(0,0,0);
+    }
+    
+    #X {
+     position: absolute;
+     background-color: red;
+     z-index: 10;
     }
     </style>
   </head>
   
   <body>
+    <button id='X' onclick='window.location.href="/"'>X</button>
     <canvas id='canvas'></canvas>
-    
     <script>
     // kode editor aku bug si*l!
     const canvas = document.getElementById('canvas');
     canvas.width = window.innerWidth - 20;
     canvas.height = canvas.width;
+    
+    const buttonX = document.querySelector('#X')
+    buttonX.style.left = canvas.width - 20 + 'px';
     
     const ctx = canvas.getContext('2d');
     let x = 20;
@@ -33,9 +41,15 @@
     let v = 3.1114;
     let g = 0.09;
     
+    //belum siap
+    canvas.addEventListener('touchstart', function(x) {
+      let posX = x.touches[0].clientX;
+      let posY = x.touches[0].clientY;
+    });
+      
+    
     (function loop() {
       // try it #lol ntah apa yang aku buat 🗿 ni
-      
       if (x > canvas.width - 40) {
         if (x > canvas.width - 40 && FUNY < 0) {
          FUN = -1;
