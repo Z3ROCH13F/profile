@@ -18,7 +18,7 @@ let main = () => {
     game1.setAttribute('id','game1');
     game1.innerText = 'clickMe';
     game1.addEventListener('click', function() {
-      window.location.href = 'game/game1.html';
+      window.location.href = 'game/';
     });
     x.appendChild(game1);
     
