@@ -1,4 +1,4 @@
-
+const buttonMain = document.querySelector('#button-main')
 let x;
 let $ = 0;
 let time = 0;
@@ -6,7 +6,7 @@ let isAlertClicked = false;
 let click = false;
 let game1;
 
-function main() {
+let main = () => {
   $++;
   if ($ == 1) {
     x = document.createElement('div');
@@ -26,18 +26,20 @@ function main() {
     x.parentNode.removeChild(x);
     $ = 0;
   }
-}
+};
 
-(function loop() {
-  if ($ > 0) {
-    click = true;
-  }
-  if (time <= 300 && click == false) {
+setInterval(() => {
+  if (time <= 20 && click == false) {
     time++;
-  }
-  if (time > 300 && $ >= 0 && !isAlertClicked) {
+    console.log(time);
+  } if ($ > 0) {
+    click = true;
+  } if (time >= 20 && click == false && isAlertClicked == false) {
     alert("tekan image");
     isAlertClicked = true;
   }
-  requestAnimationFrame(loop);
-})();
+}, 1000);
+
+buttonMain.addEventListener('touchstart', () => {
+  main();
+});
