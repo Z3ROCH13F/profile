@@ -1,4 +1,4 @@
-const buttonMain = document.querySelector('#button-main')
+const buttonMain = document.querySelector('#button-main');
 let x;
 let $ = 0;
 let time = 0;
@@ -29,12 +29,11 @@ let main = () => {
 };
 
 setInterval(() => {
-  if (time <= 20 && click == false) {
+  if (time <= 10 && click == false) {
     time++;
-    console.log(time);
   } if ($ > 0) {
     click = true;
-  } if (time >= 20 && click == false && isAlertClicked == false) {
+  } if (time >= 10 && click == false && isAlertClicked == false) {
     alert("tekan image");
     isAlertClicked = true;
   }
