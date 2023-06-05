@@ -1,2 +1,2 @@
-# profile-website
-<a href='https://z3roch13f.github.io/profile-website/'>click
+# profile
+<a href='https://z3roch13f.github.io/profile/'>click
