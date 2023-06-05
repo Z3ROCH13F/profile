@@ -40,14 +40,6 @@
     let FUNY = 1;
     let v = 3.1114;
     let g = 0.09;
-    
-    //belum siap
-    canvas.addEventListener('touchstart', function(x) {
-      let posX = x.touches[0].clientX;
-      let posY = x.touches[0].clientY;
-    });
-      
-    
     (function loop() {
       // try it #lol ntah apa yang aku buat 🗿 ni
       if (x > canvas.width - 40) {
@@ -79,7 +71,7 @@
       
       ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
       ctx.fillRect(x,y,40,40);
-      ctx.fillText(`x : ${x} y : ${y} FUN : ${FUN} FUNY : ${FUNY} v : ${v}`,5,20)
+      ctx.fillText(`x : ${x} y : ${y} FUN : ${FUN} FUNY : ${FUNY} v : ${v}`);
       
       x += FUN;
       y += FUNY;
